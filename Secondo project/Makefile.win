@@ -1,0 +1,54 @@
+# Project: Progetto Secondo
+# Compiler: Default GCC compiler
+# Compiler Type: MingW 3
+# Makefile created by wxDev-C++ 6.10.2 on 18/11/07 19.27
+
+CPP       = g++.exe
+CC        = gcc.exe
+WINDRES   = windres.exe
+OBJ       = Objects/MingW/funzioni_analizza_file.o Objects/MingW/funzioni_caric_parole.o Objects/MingW/funzioni_char.o Objects/MingW/funzioni_menu.o Objects/MingW/list.o Objects/MingW/main.o Objects/MingW/stack.o Objects/MingW/tag.o
+LINKOBJ   = Objects/MingW/funzioni_analizza_file.o Objects/MingW/funzioni_caric_parole.o Objects/MingW/funzioni_char.o Objects/MingW/funzioni_menu.o Objects/MingW/list.o Objects/MingW/main.o Objects/MingW/stack.o Objects/MingW/tag.o
+LIBS      = -L"C:/Programmi/Dev-Cpp/Lib"  
+INCS      = -I"include"
+CXXINCS   = -I"C:/Programmi/Dev-Cpp/lib/gcc/mingw32/3.4.2/include" -I"C:/Programmi/Dev-Cpp/include/c++/3.4.2/backward" -I"C:/Programmi/Dev-Cpp/include/c++/3.4.2/mingw32" -I"C:/Programmi/Dev-Cpp/include/c++/3.4.2" -I"C:/Programmi/Dev-Cpp/include" -I"C:/Programmi/Dev-Cpp/" -I"C:/Programmi/Dev-Cpp/include/common/wx/msw" -I"C:/Programmi/Dev-Cpp/include/common/wx/generic" -I"C:/Programmi/Dev-Cpp/include/common/wx/fl" -I"C:/Programmi/Dev-Cpp/include/common/wx/gizmos" -I"C:/Programmi/Dev-Cpp/include/common/wx/html" -I"C:/Programmi/Dev-Cpp/include/common/wx/mmedia" -I"C:/Programmi/Dev-Cpp/include/common/wx/net" -I"C:/Programmi/Dev-Cpp/include/common/wx/ogl" -I"C:/Programmi/Dev-Cpp/include/common/wx/plot" -I"C:/Programmi/Dev-Cpp/include/common/wx/protocol" -I"C:/Programmi/Dev-Cpp/include/common/wx/stc" -I"C:/Programmi/Dev-Cpp/include/common/wx/svg" -I"C:/Programmi/Dev-Cpp/include/common/wx/xml" -I"C:/Programmi/Dev-Cpp/include/common/wx/xrc" -I"C:/Programmi/Dev-Cpp/include/common/wx" -I"C:/Programmi/Dev-Cpp/include/common"
+RCINCS    = --include-dir "C:/PROGRA~1/Dev-Cpp/include/common"
+BIN       = Output/MingW/Progetto\ Secondo.exe
+DEFINES   = 
+CXXFLAGS  = $(CXXINCS) $(DEFINES)  
+CFLAGS    = $(INCS) $(DEFINES)  
+GPROF     = gprof.exe
+RM        = rm -f
+LINK      = gcc.exe
+
+.PHONY: all all-before all-after clean clean-custom
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	$(RM) $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(LINK) $(LINKOBJ) -o "Output\MingW\Progetto Secondo.exe" $(LIBS)
+
+Objects/MingW/funzioni_analizza_file.o: $(GLOBALDEPS) funzioni_analizza_file.c tag.h list.h stack.h funzioni_analizza_file.h
+	$(CC) -c funzioni_analizza_file.c -o Objects/MingW/funzioni_analizza_file.o $(CFLAGS)
+
+Objects/MingW/funzioni_caric_parole.o: $(GLOBALDEPS) funzioni_caric_parole.c list.h tag.h funzioni_char.h funzioni_caric_parole.h
+	$(CC) -c funzioni_caric_parole.c -o Objects/MingW/funzioni_caric_parole.o $(CFLAGS)
+
+Objects/MingW/funzioni_char.o: $(GLOBALDEPS) funzioni_char.c funzioni_char.h
+	$(CC) -c funzioni_char.c -o Objects/MingW/funzioni_char.o $(CFLAGS)
+
+Objects/MingW/funzioni_menu.o: $(GLOBALDEPS) funzioni_menu.c funzioni_menu.h
+	$(CC) -c funzioni_menu.c -o Objects/MingW/funzioni_menu.o $(CFLAGS)
+
+Objects/MingW/list.o: $(GLOBALDEPS) list.c list.h
+	$(CC) -c list.c -o Objects/MingW/list.o $(CFLAGS)
+
+Objects/MingW/main.o: $(GLOBALDEPS) main.c tag.h list.h stack.h funzioni_char.h funzioni_menu.h funzioni_analizza_file.h funzioni_caric_parole.h
+	$(CC) -c main.c -o Objects/MingW/main.o $(CFLAGS)
+
+Objects/MingW/stack.o: $(GLOBALDEPS) stack.c stack.h
+	$(CC) -c stack.c -o Objects/MingW/stack.o $(CFLAGS)
+
+Objects/MingW/tag.o: $(GLOBALDEPS) tag.c tag.h
+	$(CC) -c tag.c -o Objects/MingW/tag.o $(CFLAGS)
