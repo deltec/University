@@ -1,0 +1,48 @@
+# Project: Progetto1
+# Compiler: Default GCC compiler
+# Compiler Type: MingW 3
+# Makefile created by wxDev-C++ 6.10.2 on 27/10/07 18.12
+
+CPP       = g++.exe
+CC        = gcc.exe
+WINDRES   = windres.exe
+OBJ       = Objects/MingW/main.o Objects/MingW/funzioni_caric_file.o Objects/MingW/funzioni_char.o Objects/MingW/funzioni_menu.o Objects/MingW/funzioni_ordinamento.o Objects/MingW/funzioni_scri_file.o
+LINKOBJ   = Objects/MingW/main.o Objects/MingW/funzioni_caric_file.o Objects/MingW/funzioni_char.o Objects/MingW/funzioni_menu.o Objects/MingW/funzioni_ordinamento.o Objects/MingW/funzioni_scri_file.o
+LIBS      = -L"C:/Programmi/Dev-Cpp/Lib"  
+INCS      = -I"include"
+CXXINCS   = -I"C:/Programmi/Dev-Cpp/lib/gcc/mingw32/3.4.2/include" -I"C:/Programmi/Dev-Cpp/include/c++/3.4.2/backward" -I"C:/Programmi/Dev-Cpp/include/c++/3.4.2/mingw32" -I"C:/Programmi/Dev-Cpp/include/c++/3.4.2" -I"C:/Programmi/Dev-Cpp/include" -I"C:/Programmi/Dev-Cpp/" -I"C:/Programmi/Dev-Cpp/include/common/wx/msw" -I"C:/Programmi/Dev-Cpp/include/common/wx/generic" -I"C:/Programmi/Dev-Cpp/include/common/wx/fl" -I"C:/Programmi/Dev-Cpp/include/common/wx/gizmos" -I"C:/Programmi/Dev-Cpp/include/common/wx/html" -I"C:/Programmi/Dev-Cpp/include/common/wx/mmedia" -I"C:/Programmi/Dev-Cpp/include/common/wx/net" -I"C:/Programmi/Dev-Cpp/include/common/wx/ogl" -I"C:/Programmi/Dev-Cpp/include/common/wx/plot" -I"C:/Programmi/Dev-Cpp/include/common/wx/protocol" -I"C:/Programmi/Dev-Cpp/include/common/wx/stc" -I"C:/Programmi/Dev-Cpp/include/common/wx/svg" -I"C:/Programmi/Dev-Cpp/include/common/wx/xml" -I"C:/Programmi/Dev-Cpp/include/common/wx/xrc" -I"C:/Programmi/Dev-Cpp/include/common/wx" -I"C:/Programmi/Dev-Cpp/include/common"
+RCINCS    = --include-dir "C:/PROGRA~1/Dev-Cpp/include/common"
+BIN       = Output/MingW/Progetto1.exe
+DEFINES   = 
+CXXFLAGS  = $(CXXINCS) $(DEFINES)   -ansi -traditional-cpp
+CFLAGS    = $(INCS) $(DEFINES)   -ansi -traditional-cpp
+GPROF     = gprof.exe
+RM        = rm -f
+LINK      = g++.exe
+
+.PHONY: all all-before all-after clean clean-custom
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	$(RM) $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(LINK) $(LINKOBJ) -o "Output\MingW\Progetto1.exe" $(LIBS)
+
+Objects/MingW/main.o: $(GLOBALDEPS) main.c funzioni_caric_file.h funzioni_char.h funzioni_menu.h funzioni_ordinamento.h funzioni_scri_file.h
+	$(CC) -c main.c -o Objects/MingW/main.o $(CFLAGS)
+
+Objects/MingW/funzioni_caric_file.o: $(GLOBALDEPS) funzioni_caric_file.c funzioni_caric_file.h
+	$(CC) -c funzioni_caric_file.c -o Objects/MingW/funzioni_caric_file.o $(CFLAGS)
+
+Objects/MingW/funzioni_char.o: $(GLOBALDEPS) funzioni_char.c funzioni_char.h
+	$(CC) -c funzioni_char.c -o Objects/MingW/funzioni_char.o $(CFLAGS)
+
+Objects/MingW/funzioni_menu.o: $(GLOBALDEPS) funzioni_menu.c funzioni_menu.h
+	$(CC) -c funzioni_menu.c -o Objects/MingW/funzioni_menu.o $(CFLAGS)
+
+Objects/MingW/funzioni_ordinamento.o: $(GLOBALDEPS) funzioni_ordinamento.c funzioni_caric_file.h funzioni_ordinamento.h
+	$(CC) -c funzioni_ordinamento.c -o Objects/MingW/funzioni_ordinamento.o $(CFLAGS)
+
+Objects/MingW/funzioni_scri_file.o: $(GLOBALDEPS) funzioni_scri_file.c funzioni_caric_file.h funzioni_scri_file.h
+	$(CC) -c funzioni_scri_file.c -o Objects/MingW/funzioni_scri_file.o $(CFLAGS)

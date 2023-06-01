@@ -1,0 +1,11 @@
+                       Menu
+1 - Carica file
+2 - Ordina e visualizza per parola con (selection sort)
+3 - Ordina e visualizza per frequenza d' occorrrenza (selection sort)
+4 - Ordina e visualizza per parola con (Buble sort)
+5 - Ordina e visualizza per frequenza d' occorrrenza (Buble sort)
+6 - Ordina e visualizza per parola con (Quick sort)
+7 - Ordina e visualizza per frequenza d' occorrrenza (Quicksort)
+8 - Stampa risultato su file
+9 - Esci
+Fai la tua scelta:

@@ -1,0 +1,59 @@
+nfattti essa implementa una ricerca sequenziale. la ricerca sequenziale ha una complessita media  O(n).
+
+PROCEDURE e PARAMETRI  (Pascal-like)
+Crea_Struttura(INPUT:STRING “file_di_testo”      OUTPUT:ARRAY STRUTTURA PAROLA array , INT elem)
+Stampa_Parole(INPUT:ARRAY STRUTTURA PAROLA array, INT elem     OUTPUT:)
+Ricerca_Parola(INPUT:ARRAY STRUTTURA PAROLA array, INT elem,STRING  parola OUTPUT: INTEGER b)
+
+
+Dettagli implementativi (orientato a C)
+
+La funzione Crea_Struttura alloca dinamicanmente l'array di puntatori di PAROLA a 128 a 128, riallocando ogni volta che termina lo spazio.
+Ogni parola nel testo non puo essere maggiore di 64 caratteri. 
+Le funzioni per il caricamento file si trovano nel file funzioni_caric_file.c e definiti nel file  funzioni_caric_file.h
+prototipi di funioni:
+PAROLA ** Crea_Struttura(char* File_Di_Testo,int *Elem) //ritorna una struttura dati PAROLA e il numero di elementi nella variabile puntata da Elem
+
+void Stampa_Parole(PAROLA ** Array_Di_Parola ,int Elem)
+
+int Ricerca_Parola(PAROLA ** Array_Di_Parole,int elem,char *Parola)//ritorna l'indice della posizione della paola cercata altrimenti -1
+
+
+
+Ordinamenti
+Dall'analisi effettuata, una volta estratto le parole con il numero di occorrenze esse devono essere ordinate; alfabeticamente o per frequenza di occorrenze. Tale ordinameto deve poter essere fatto da 3 diversi algoritmi di ordinamento. Gli algoritmi scelti per ordinare tali informazioni sono:
+
+Algoritmo                Comlessita' computazionale
+
+Selection sort     	          θ(n2)
+Insertion sort		          O(n2)
+Bubble sort		          θ(n2)
+
+La scelta di questi 3 algoritmi e' puramente a scopo educativo. Sono algoritmi di ordinamento sul posto di facile implementazione.
+
+Funzioni ausiliarie
+
+
+
+
+
+Funzione Principale
+
+Crea_Menu(INPUT: FILE  “file_di_menu”    OUTPUT: STRING Array,  INTEGER  elementi)
+Stampa_Menu(INPUT: STRING  Array,  INTEGER  elementi)  //stampa a video il menu
+
+Attendi un carattere di scelta da testiera
+
+SCELTA DAL MENU:
+
+Carica_File(INPTU:“File_Da_Caricare”      OUTPUT: RECORD PAROLA  Array, INTEGER parole)
+
+Selection_Sort(INPUT:     OUTPUT:)
+Selection_Sort(INPUT:     OUTPUT:)
+
+Insertion_Sort(INPUT:      OUTPUT:)
+Insertion_Sort(INPUT:      OUTPUT:)
+
+Bubble_Sort(INPUT:         OUTPUT:)
+Bubble_Sort(INPUT:         OUTPUT:)
+    
