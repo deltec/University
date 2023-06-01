@@ -1,0 +1,32 @@
+<testo>
+     <div>
+        <cap>
+             <titolo>
+             <\titolo>
+             <par>
+                 Ciao Sono Nando
+             <\par> 
+       <\cap>
+        <sec>
+            <par>
+               Ciao Sono PAolo
+            <\par>
+       <\sec>
+
+    <\div>
+<div>
+        <cap>
+             <titolo>
+             <\titolo>
+             <par>
+                 Siamo studenti
+             <\par> 
+       <\cap>
+        <sec>
+            <par>
+              del corso di Laboratorio sistemi operativi
+            <\par>
+       <\sec>
+
+    <\div>
+<\testo>

@@ -1,0 +1,60 @@
+# Project: Progetto4
+# Compiler: Default GCC compiler
+# Compiler Type: MingW 3
+# Makefile created by wxDev-C++ 6.10.2 on 18/01/08 03.12
+
+CPP       = g++.exe
+CC        = gcc.exe
+WINDRES   = windres.exe
+OBJ       = Objects/MingW/main.o Objects/MingW/coda.o Objects/MingW/controllo_sintattico.o Objects/MingW/gestione_regole.o Objects/MingW/grafo.o Objects/MingW/list.o Objects/MingW/percorso_minimo.o Objects/MingW/stack.o Objects/MingW/funzioni_menu.o Objects/MingW/funzioni_char.o
+LINKOBJ   = Objects/MingW/main.o Objects/MingW/coda.o Objects/MingW/controllo_sintattico.o Objects/MingW/gestione_regole.o Objects/MingW/grafo.o Objects/MingW/list.o Objects/MingW/percorso_minimo.o Objects/MingW/stack.o Objects/MingW/funzioni_menu.o Objects/MingW/funzioni_char.o
+LIBS      = -L"C:/Programmi/Dev-Cpp/Lib"  
+INCS      = -I"include"
+CXXINCS   = -I"C:/Programmi/Dev-Cpp/lib/gcc/mingw32/3.4.2/include" -I"C:/Programmi/Dev-Cpp/include/c++/3.4.2/backward" -I"C:/Programmi/Dev-Cpp/include/c++/3.4.2/mingw32" -I"C:/Programmi/Dev-Cpp/include/c++/3.4.2" -I"C:/Programmi/Dev-Cpp/include" -I"C:/Programmi/Dev-Cpp/" -I"C:/Programmi/Dev-Cpp/include/common/wx/msw" -I"C:/Programmi/Dev-Cpp/include/common/wx/generic" -I"C:/Programmi/Dev-Cpp/include/common/wx/fl" -I"C:/Programmi/Dev-Cpp/include/common/wx/gizmos" -I"C:/Programmi/Dev-Cpp/include/common/wx/html" -I"C:/Programmi/Dev-Cpp/include/common/wx/mmedia" -I"C:/Programmi/Dev-Cpp/include/common/wx/net" -I"C:/Programmi/Dev-Cpp/include/common/wx/ogl" -I"C:/Programmi/Dev-Cpp/include/common/wx/plot" -I"C:/Programmi/Dev-Cpp/include/common/wx/protocol" -I"C:/Programmi/Dev-Cpp/include/common/wx/stc" -I"C:/Programmi/Dev-Cpp/include/common/wx/svg" -I"C:/Programmi/Dev-Cpp/include/common/wx/xml" -I"C:/Programmi/Dev-Cpp/include/common/wx/xrc" -I"C:/Programmi/Dev-Cpp/include/common/wx" -I"C:/Programmi/Dev-Cpp/include/common"
+RCINCS    = --include-dir "C:/PROGRA~1/Dev-Cpp/include/common"
+BIN       = Output/MingW/Progetto4.exe
+DEFINES   = 
+CXXFLAGS  = $(CXXINCS) $(DEFINES)  
+CFLAGS    = $(INCS) $(DEFINES)  
+GPROF     = gprof.exe
+RM        = rm -f
+LINK      = g++.exe
+
+.PHONY: all all-before all-after clean clean-custom
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	$(RM) $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(LINK) $(LINKOBJ) -o "Output\MingW\Progetto4.exe" $(LIBS)
+
+Objects/MingW/main.o: $(GLOBALDEPS) main.c list.h grafo.h gestione_regole.h controllo_sintattico.h funzioni_menu.h percorso_minimo.h funzioni_char.h
+	$(CC) -c main.c -o Objects/MingW/main.o $(CFLAGS)
+
+Objects/MingW/coda.o: $(GLOBALDEPS) coda.c list.h coda.h
+	$(CC) -c coda.c -o Objects/MingW/coda.o $(CFLAGS)
+
+Objects/MingW/controllo_sintattico.o: $(GLOBALDEPS) controllo_sintattico.c list.h grafo.h stack.h controllo_sintattico.h gestione_regole.h
+	$(CC) -c controllo_sintattico.c -o Objects/MingW/controllo_sintattico.o $(CFLAGS)
+
+Objects/MingW/gestione_regole.o: $(GLOBALDEPS) gestione_regole.c list.h grafo.h gestione_regole.h
+	$(CC) -c gestione_regole.c -o Objects/MingW/gestione_regole.o $(CFLAGS)
+
+Objects/MingW/grafo.o: $(GLOBALDEPS) grafo.c list.h grafo.h coda.h
+	$(CC) -c grafo.c -o Objects/MingW/grafo.o $(CFLAGS)
+
+Objects/MingW/list.o: $(GLOBALDEPS) list.c list.h
+	$(CC) -c list.c -o Objects/MingW/list.o $(CFLAGS)
+
+Objects/MingW/percorso_minimo.o: $(GLOBALDEPS) percorso_minimo.c list.h percorso_minimo.h grafo.h
+	$(CC) -c percorso_minimo.c -o Objects/MingW/percorso_minimo.o $(CFLAGS)
+
+Objects/MingW/stack.o: $(GLOBALDEPS) stack.c stack.h
+	$(CC) -c stack.c -o Objects/MingW/stack.o $(CFLAGS)
+
+Objects/MingW/funzioni_menu.o: $(GLOBALDEPS) funzioni_menu.c funzioni_menu.h
+	$(CC) -c funzioni_menu.c -o Objects/MingW/funzioni_menu.o $(CFLAGS)
+
+Objects/MingW/funzioni_char.o: $(GLOBALDEPS) funzioni_char.c funzioni_char.h
+	$(CC) -c funzioni_char.c -o Objects/MingW/funzioni_char.o $(CFLAGS)
